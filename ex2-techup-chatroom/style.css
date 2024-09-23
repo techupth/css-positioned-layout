@@ -1,1 +1,123 @@
 /* Start coding here */
+:root {
+  --box-color-green: rgb(14, 151, 14);
+  --box-color-gray: rgb(191, 201, 191);
+  --box-color-dimgrey: dimgrey;
+}
+
+.roomName {
+  background-color: dimgrey;
+  color: white;
+  width: 100vw;
+  height: 35px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+}
+.chatA {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 25px 5px;
+}
+.chatB {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.chatbox-green {
+  background-color: var(--box-color-green);
+  border-radius: 25px;
+  width: 170px;
+  height: 10px;
+  padding: 15px;
+  margin: 5px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-size: 16px;
+
+  position: relative;
+}
+
+.chatbox-gray {
+  background-color: var(--box-color-gray);
+  border-radius: 25px;
+  width: 170px;
+  height: 10px;
+  padding: 15px;
+  margin: 5px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-size: 16px;
+
+  position: relative;
+}
+
+.x-cross {
+  color: white;
+  background-color: dimgrey;
+
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 180px;
+  bottom: 30px;
+}
+
+.chatbox-dimgray {
+  background-color: var(--box-color-dimgrey);
+  border-radius: 25px;
+  width: 170px;
+  height: 10px;
+  padding: 15px;
+  margin: 5px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.msg-trail {
+  height: 15px;
+  width: 16px;
+
+  position: relative;
+  left: 112px;
+  bottom: 21px;
+}
+
+.object1 {
+  height: 12px;
+  width: 12px;
+  border-radius: 100px;
+  background-color: white;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 2;
+}
+
+.object2 {
+  height: 15px;
+  width: 15px;
+  border-radius: 100px;
+  background-color: var(--box-color-green);
+  position: absolute;
+  z-index: 1;
+}
