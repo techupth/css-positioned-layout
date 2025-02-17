@@ -1,1 +1,72 @@
 /* Start coding here */
+body {    
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header {    
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.chat-container {
+    background: rgb(255, 255, 255);
+    padding: 20px;    
+    position: relative;
+}
+
+.message1,.message2,.message3,.message-received1,.message-received2 {
+    min-width: 15%;
+    position: absolute;
+    padding: 10px 15px;   
+    border-radius: 20px;
+}
+
+.message1 {
+    top: 30px;
+    right: 30px;
+    background-color: rgb(40, 250, 40);
+}
+
+.message2 {
+    top:80px;
+    right:30px;
+    background-color: rgb(200, 200, 200);
+}
+
+.message3 {    
+    top:130px;
+    right: 30px;
+    background-color: rgb(40, 250, 40);
+}
+
+
+.message-received1 {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    background-color: gray;
+}
+
+.message-received2 {
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    background-color: gray;
+}
+
+.cancel-symbol {
+    position: absolute;
+    top:80px;
+    right: 27px;
+    background-color: rgb(158, 153, 153);
+    padding: 5px 5px;
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
+}
+
