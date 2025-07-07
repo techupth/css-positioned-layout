@@ -1,5 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-family: "Kanit";
+  position: relative;
 }
 
-/* Start coding here */
+.box {
+  border: 10px solid white;
+}
+
+.box img {
+  display: block;
+}
+
+.skip,
+.text {
+  color: white;
+}
+
+.skip {
+  position: absolute;
+}
+
+.text {
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 2;
+}
+
