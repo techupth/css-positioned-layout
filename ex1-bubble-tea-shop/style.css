@@ -1,5 +1,62 @@
 body {
   font-family: "Kanit";
+  background: #000;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble-tea-card {
+  position: relative;
+  background: #fff;
+  /* border-radius: 8px; */
+  box-shadow: 0 0 0 8px #fff, 0 2px 16px rgba(0,0,0,0.5);
+  overflow: hidden;
+  width: 700px;
+  max-width: 90vw;
+}
+
+.bubble-tea-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.location-label {
+  position: absolute;
+  top: 32px;
+  right: 0px;
+  background: rgba(80, 80, 80, 0.8);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.2em 1.2em;
+  /* border-radius: 4px; */
+  font-weight: 500;
+  z-index: 2;
+}
+
+.shop-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.0) 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 8px #000;
+  z-index: 2;
 }
 
 /* Start coding here */
