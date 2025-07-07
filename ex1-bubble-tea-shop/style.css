@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: red;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,14 @@ body {
 }
 
 .box {
+  position: relative;
   border: 10px solid white;
+  overflow: hidden;
 }
 
 .box img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -27,18 +31,32 @@ body {
 }
 
 .skip {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 80px;
+  height: 30px;
+  text-align: center;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  top: 30px;
 }
 
 .text {
   position: absolute;
+  bottom: 6px;
+  left: 10px;
+  z-index: 3;
 }
 
 .overlay {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 40%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   z-index: 2;
 }
 
