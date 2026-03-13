@@ -1,1 +1,131 @@
 /* Start coding here */
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ===== Header ===== */
+  .chat-header {
+    background-color: #808080;
+    padding: 14px 20px;
+  }
+  
+  .chat-header h1 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  
+  /* ===== Chat Body ===== */
+  .chat-body {
+    flex: 1;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+  }
+  
+  /* ===== Message Rows ===== */
+  .message-row {
+    display: flex;
+  }
+  
+  .message-row.right {
+    justify-content: flex-end;
+  }
+  
+  .message-row.left {
+    justify-content: flex-start;
+  }
+  
+  /* ===== Bubble Base ===== */
+  .bubble {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    max-width: 280px;
+    min-width: 200px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  
+  /* ===== Green Bubble (sent) ===== */
+  .bubble.green {
+    background-color: #22cc00;
+    color: #ffffff;
+    position: relative; /* needed for tail pseudo-element */
+  }
+  
+  /* Tail pointing right — using Positioned Layout (absolute inside relative) */
+  .bubble.green.tail-right::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 5px;
+    
+    
+    /* สร้างรูปทรงหางที่เรียวและเอียง */
+    width: 15px;
+    height: 12px;
+    background-color: #22cc00;
+    
+    /* ใช้ clip-path เพื่อตัดทรงให้เหมือนหาง "ติ่ง" ในรูปที่สุด */
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+
+    /* หมุนให้ปลายชี้ขึ้นด้านบน */
+    transform: rotate(-53deg);
+
+  }
+  
+  /* ===== Light Gray Bubble (with × button) ===== */
+  .bubble.gray {
+    background-color: #e0e0e0;
+    color: #333333;
+    position: relative; /* containing block for the × button */
+  }
+  
+  /* ===== × Delete Button — Positioned Layout overlapping the bubble ===== */
+  .delete-btn {
+    /* Positioned Layout: placed relative to the gray bubble */
+    position: absolute;
+    top: -8px;
+    right: -8px;
+  
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: #999999;
+    color: #ffffff;
+    font-size: 11px;
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  
+    transition: background-color 0.2s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #777777;
+  }
+  
+  /* ===== Dark Gray Bubble (received) ===== */
+  .bubble.dark-gray {
+    background-color: #808080;
+    color: #ffffff;
+  }
