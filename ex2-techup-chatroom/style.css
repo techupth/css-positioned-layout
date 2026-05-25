@@ -1,1 +1,93 @@
-/* Start coding here */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #ffffff;
+  }
+  
+  header {
+    background-color: #7a7a7a;
+    color: white;
+    padding: 15px 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+  }
+  
+  .message-row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .message-row.right {
+    justify-content: flex-end;
+  }
+  
+  .message-row.left {
+    justify-content: flex-start;
+  }
+  
+  .bubble {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bubble.green {
+    background-color: #00cc00;
+    color: black;
+  }
+  
+  .bubble.light-gray {
+    background-color: #e6e6e6;
+    color: black;
+  }
+  
+  .bubble.dark-gray {
+    background-color: #808080;
+    color: white;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    background-color: #b3b3b3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .tail {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid #00cc00;
+    border-right: 15px solid transparent;
+  }
