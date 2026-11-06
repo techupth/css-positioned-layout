@@ -1,20 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://kit.fontawesome.com/bf7220ad33.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
-  <title>Positioned Layout Exercise 2 TechUp Chatroom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techup Chatroom</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <!-- Start coding here -->
-</body>
+  <header class="header">
+    Techup Chatroom
+  </header>
 
+  <main class="chatroom">
+    <section class="messages-right">
+      <div class="message green">
+        สวัสดีจ้า
+        <span class="tail"></span>
+      </div>
+
+      <div class="message light-gray">
+        Coding สนุกจังเลย
+        <button class="close-button" type="button" aria-label="Close">x</button>
+      </div>
+
+      <div class="message green">
+        😍 🥰
+        <span class="tail"></span>
+      </div>
+    </section>
+
+    <section class="messages-left">
+      <div class="message gray">😍</div>
+      <div class="message gray">🥳</div>
+    </section>
+  </main>
+</body>
 </html>
