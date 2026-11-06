@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>Positioned Layout Exercise 1 Bubble Tea Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kully-Qoo Bubble Tea</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Start coding here -->
-  <div>
-    <img src="./preview-img.jpeg" />
-    <div>Kully-Qoo Bubble Tea ตลาดปากน้ำ</div>
-    <div>ปากน้ำ</div>
-    <div></div>
-  </div>
-</body>
 
+  <!-- กรอบสีขาวด้านนอก (position: absolute เทียบกับ body) -->
+  <div class="frame">
+
+    <!-- กล่องรูปภาพ (position: relative เป็นตัวอ้างอิงให้ลูกๆ) -->
+    <div class="card">
+      <img class="photo" src="./preview-img.jpeg" alt="Kully-Qoo Bubble Tea">
+      <div class="overlay"></div>
+      <span class="badge">ปากน้ำ</span>
+      <h2 class="caption">Kully-Qoo Bubble Tea ตลาดปากน้ำ</h2>
+    </div>
+
+  </div>
+
+</body>
 </html>

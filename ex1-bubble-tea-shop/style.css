@@ -1,5 +1,78 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
+  position: relative;          /* ตัวอ้างอิงของ .frame */
+  background: #000;
   font-family: "Kanit";
 }
 
-/* Start coding here */
+/* ===== กรอบสีขาวด้านนอก ===== */
+.frame {
+  position: absolute;          /* วางตำแหน่งอิสระ */
+  top: 113px;
+  left: 113px;
+  width: 598px;                /* 598 + padding 8*2 = 614 */
+  height: 294px;
+  padding: 8px;
+  background: #fff;
+}
+
+/* ===== การ์ดรูปภาพ ===== */
+.card {
+  position: relative;          /* ให้ลูกใช้ absolute เทียบกับการ์ด */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #555;            /* สีสำรองกรณีรูปไม่โหลด */
+}
+
+/* รูปเต็มการ์ด */
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* เงาไล่ระดับสีดำด้านล่าง เพื่อให้ตัวหนังสืออ่านง่าย */
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* ป้าย "ปากน้ำ" มุมขวาบน */
+.badge {
+  position: absolute;
+  top: 20px;
+  right: -4px;
+  padding: 10px 20px;
+  background: rgba(105, 105, 105, 0.9);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  border-radius: 3px;
+}
+
+/* ข้อความมุมซ้ายล่าง */
+.caption {
+  position: absolute;
+  left: 8px;
+  bottom: 6px;
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
